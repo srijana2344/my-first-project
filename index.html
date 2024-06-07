@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokoSocial - Responsive Social Media Website</title>
+    <!-- Iconscout CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <h2 class="logo">PokoSocial</h2>
+        <div class="search-bar">
+          <input
+            type="search"
+            placeholder="Search for creators, inspirations, and projects"
+          />
+        </div>
+        <label class="btn btn-primary" for="create-post">Create</label>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!---------------- LEFT ------------------------->
+        <div class="left">
+          <a class="profile">
+            <div class="profile-photo">
+              <img src="https://via.placeholder.com/60" alt="Profile Photo" />
+            </div>
+            <div class="handle">
+              <h4>Srijana kc</h4>
+              <p class="text-muted">Good Morning</p>
+            </div>
+          </a>
+          <!---------------- SIDEBAR ------------------------->
+          <div class="sidebar">
+            <a class="menu-item active">
+              <span><i class="uil uil-home"></i></span>
+              <h3>Home</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-compass"></i></span>
+              <h3>Explore</h3>
+            </a>
+            <a class="menu-item" id="notification">
+              <span>
+                <i class="uil uil-bell"></i>
+                <small class="notification-count">9+</small>
+              </span>
+              <h3>Notifications</h3>
+            </a>
+            <div class="notifications popup">
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Rohan Sapkota</b> accepted your friend request.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Nikhil Khadka</b> commented on your post.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="https://via.placeholder.com/60"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Ayusha Ale magar</b> commented on your post.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+            </div>
+
+            <a class="menu-item" id="messages-notification">
+              <span>
+                <i class="uil uil-envelope-alt"></i>
+                <small class="notification-count">6</small>
+              </span>
+              <h3>Message</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-bookmark"></i></span>
+              <h3>Bookmarks</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-chart-line"></i></span>
+              <h3>Analytics</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-palette"></i></span>
+              <h3>Theme</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-setting"></i></span>
+              <h3>Settings</h3>
+            </a>
+          </div>
+          <!-- End of sidebar -->
+          <label for="create-post" class="btn btn-primary">Create post</label>
+        </div>
+        <!----------------END OF LEFT------------------------->
+        <!-- MIDDLE -->
+        <div class="middle">
+          <!---------------STORIES------------------------------->
+          <div class="stories">
+            <div class="story">
+              <div class="profile-photo">
+                <img src="https://via.placeholder.com/60" alt="Your Story" />
+              </div>
+              <p class="name">Your Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img
+                  src="https://via.placeholder.com/60"
+                  alt="Ayusha's Story"
+                />
+              </div>
+              <p class="name">Ayusha's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img
+                  src="https://via.placeholder.com/60"
+                  alt="Menuka's Story"
+                />
+              </div>
+              <p class="name">Menuka's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="https://via.placeholder.com/60" alt="Neema's Story" />
+              </div>
+              <p class="name">Neema's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="https://via.placeholder.com/60" alt="Rohan's Story" />
+              </div>
+              <p class="name">Rohan's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img
+                  src="https://via.placeholder.com/60"
+                  alt="Nikhil's Story"
+                />
+              </div>
+              <p class="name">Nikhil's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="https://via.placeholder.com/60" alt="Sita's Story" />
+              </div>
+              <p class="name">Sita's Story</p>
+            </div>
+            <!-- Other stories omitted for brevity -->
+          </div>
+          <!--end of stories-->
+          <form class="create-post">
+            <div class="profile-photo">
+              <img
+                src="C:\Users\Admin\Desktop\Gallery.jpeg"
+                alt="Profile Photo"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="What is on your mind?"
+              id="create-post"
+            />
+            <input type="submit" value="Post" class="btn btn-primary" />
+          </form>
+        </div>
+        <!-- RIGHT -->
+        <div class="right">
+          <!-- Content for the right section can go here -->
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

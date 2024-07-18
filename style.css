@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 :root {
+  --color-white: hsl(252, 30%, 100%);
+  --color-dark: hsl(252, 30%, 10%);
+  --color-gray: hsl(252, 25%, 65%);
   --color-primary: hsl(252, 75%, 60%);
-  --color-secondary: hsl(284, 12%, 82%);
-  --color-gray: hsl(252, 15%, 65%);
-  --color-light: hsl(322, 53%, 86%);
-  --color-dark: hsl(252, 30%, 17%);
-  --color-white: hsl(0, 95%, 100%);
-  --color-danger: hsl(0, 40%, 45%);
+  --color-secondary: hsl(252, 100%, 90%);
+  --color-sucess: hsl(120, 95%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-black: hsl(252, 30%, 17%);
+  --color-light: hsl(252, 30%, 95%);
   --border-radius: 2rem;
   --card-border-radius: 1rem;
   --btn-padding: 0.6rem 2rem;
@@ -34,6 +34,7 @@ body {
   color: var(--color-dark);
   background: var(--color-light);
   overflow-x: hidden;
+  margin: 0; /* Ensure no default margin */
 }
 
 .container {
@@ -55,6 +56,10 @@ body {
 
 .search-bar input {
   width: 100%;
+  background: var(--color-secondary);
+  padding: var(--search-padding);
+  border-radius: var(--border-radius);
+  border: none;
 }
 
 .btn {
@@ -115,15 +120,9 @@ nav .container {
   justify-content: space-between;
 }
 
-nav .search-bar {
-  background: var(--color-light);
-  border-radius: var(--border-radius);
-  padding: var(--search-padding);
-}
-
 nav .search-bar input[type="search"] {
   background: transparent;
-  width: 30vw;
+  width: 50vw;
   margin-left: 1rem;
   font-size: 0.9rem;
   color: var(--color-dark);
@@ -131,12 +130,6 @@ nav .search-bar input[type="search"] {
 
 nav .search-bar input[type="search"]::placeholder {
   color: var(--color-gray);
-}
-
-nav .create {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
 }
 
 main {
@@ -151,26 +144,17 @@ main .container {
   position: relative;
 }
 
-.main .left {
+.main .container .left {
   height: max-content;
   position: sticky;
   top: var(--sticky-top-left);
-}
-
-.main .left .profile {
-  padding: var(--card-padding);
-  background: var(--color-white);
-  border-radius: var(--card-border-radius);
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-  width: 100%;
 }
 
 .left .sidebar {
   margin-top: 1rem;
   background: var(--color-white);
   border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
 }
 
 .left .sidebar .menu-item {
@@ -241,22 +225,20 @@ main .container {
   padding: 1rem 0;
 }
 
-/* Adjusted CSS for notification popup */
-.left .notifications.popup {
+.left .notifications-popup {
   position: absolute;
   top: 0;
-  left: 110%; /* Adjusted to ensure the popup is initially off-screen */
+  left: 110%;
   width: 30rem;
   background: var(--color-white);
   border-radius: var(--card-border-radius);
   padding: var(--card-padding);
   box-shadow: 0 0 2rem var(--color-primary);
   z-index: 8;
-  display: none; /* Initially hiding the popup */
+  display: none;
 }
 
-/* Added style for the arrow */
-.left .notifications.popup::before {
+.left .notifications-popup::before {
   content: "";
   width: 1.2rem;
   height: 1.2rem;
@@ -268,16 +250,14 @@ main .container {
   transform: rotate(45deg);
 }
 
-/* Adjusted spacing between notification items */
-.left .notifications.popup > div {
+.left .notifications-popup > div {
   display: flex;
-  align-items: center; /* Adjusted to center-align notification items */
+  align-items: start;
   gap: 1rem;
   margin-bottom: 1rem;
 }
 
-/* Ensure small text within notifications is displayed correctly */
-.left .notifications.popup small {
+.left .notifications-popup small {
   display: block;
 }
 
@@ -295,7 +275,7 @@ main .container {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: azure;
+  color: aqua;
   font-size: 0.75rem;
   width: 100%;
   background: none;
@@ -303,7 +283,280 @@ main .container {
   overflow: hidden;
 }
 
+.middle .stories .story .name {
+  z-index: 2;
+}
+
 .middle .stories .story:nth-child(1) {
-  background: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/346141877_990277125479989_5513091895342792880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=kKQyhAlxTwAQ7kNvgEVW8tR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGGmSGbC368aI0ZdfY2WkNdu6L0WiaPGKRP1k8_2s7piA&oe=665D89CF")
-    no-repeat center center/cover;
+  background: url("image/It.jpg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(2) {
+  background: url("image/guitar.jpg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(3) {
+  background: url("image/flower.jpg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(4) {
+  background: url("image/Link.jpg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(5) {
+  background: url("image/cyber.jpg") no-repeat center center/cover;
+}
+
+.middle .stories .story:nth-child(6) {
+  background: url("image/Infomation.jpg") no-repeat center center/cover;
+}
+
+.middle .story .profile-photo {
+  width: 2rem;
+  height: 2rem;
+  align-self: start;
+  border: 3px solid var(--color-primary);
+}
+
+.middle .create-post {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background: var(--color-white);
+  padding: 0.4rem var(--card-padding);
+  border-radius: var(--border-radius);
+}
+
+.middle .create-post input[type="text"] {
+  width: 100%;
+  padding-left: 1rem;
+  background: transparent;
+  color: var(--color-dark);
+  border: none;
+}
+
+.middle .feeds .feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.middle .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.middle .feed .photo {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.middle .feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.middle .liked-by {
+  display: flex;
+}
+
+.middle .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: 0.6rem;
+}
+
+.middle .liked-by span:first-child {
+  margin: 0;
+}
+
+.middle .liked-by p {
+  margin-left: 0.5rem;
+}
+
+/* Right */
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right .messages i {
+  font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.right .messages .category .active {
+  border-color: var(--color-dark);
+}
+.right .messages .message-requests {
+  color: var(--color-primary);
+}
+
+.right .messages .message {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.right .messages .profile-photo {
+  position: relative;
+  overflow: visible;
+}
+
+.right .profile-photo img {
+  border-radius: 50%;
+}
+
+.right .messages .message:last-child {
+  margin: 0;
+}
+
+.right .messages .message p {
+  font-size: 0.8rem;
+}
+
+.right .messages .message .profile-photo .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  background: var(--color-success); /* Adjusted to use var(--color-success) */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* friend request */
+.right .friend-requests {
+  margin-top: 1rem;
+}
+.right .friend-requests h4 {
+  color: var(--color-gray);
+  margin: 1rem 0;
+}
+.right .request {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
+}
+.right .request .info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.right .request .action {
+  display: flex;
+  gap: 1rem;
+}
+
+/* @media queries for small laptop and big tablets  */
+@media screen and(max-width: 1200px) {
+  .container {
+    width: 96%;
+  }
+  main .container {
+    grid-template-columns: 5rem auto 30vw;
+    gap: 1rem;
+  }
+  .left {
+    width: 5rem;
+    z-index: 5;
+  }
+  main .container .left .profile {
+    display: none;
+  }
+  .sidebar h3 {
+    display: none;
+  }
+  .left .btn {
+    display: none;
+  }
+}
+
+/* ree */
+@media screen and (max-width: 992px) {
+  nav .search-bar {
+    display: none;
+  }
+  main .container {
+    grid-template-columns: 0 auto 5rem;
+    gap: 0;
+  }
+  main .container .left {
+    grid-column: 3/4;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* notification popup */
+  .left .notifications-popup {
+    position: absolute;
+    left: 20rem;
+    width: 20rem;
+  }
+  .left .notifications-popup::before {
+    position: absolute;
+    top: 1.3rem;
+    left: calc(20rem - 00.6rem);
+    display: block
+  }
+  main .container .middle {
+    grid-column: 1/3;
+  }
+  main .container .right {
+    display: none;
+  }
 }

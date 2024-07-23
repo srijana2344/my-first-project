@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokoSocial - Responsive Social Media Website</title>
+    <!-- Iconscout CDN -->
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
+    />
+    <!-- StyleSheet -->
+  </head>
+
+  <body>
+    <nav>
+      <div class="container logo-search-create">
+        <h2 class="logo">Socialmedia clone</h2>
+        <div class="search-bar">
+          <i class="uil uil-search"></i>
+          <input
+            type="search"
+            placeholder="Search for creators, inspirations, and projects"
+          />
+        </div>
+        <label class="btn btn-primary" for="create-post">Create</label>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <!-- LEFT -->
+        <div class="left">
+          <a class="profile">
+            <div class="profile-photo">
+              <img src="image/brother.jpg" width="100" alt="Profile Photo" />
+            </div>
+            <div class="handle">
+              <h4>Srijana kc</h4>
+              <p class="text-muted">Good Morning</p>
+            </div>
+          </a>
+
+          <!-- SIDEBAR -->
+          <div class="sidebar">
+            <a class="menu-item active">
+              <span><i class="uil uil-home"></i></span>
+              <h3>Home</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-compass"></i></span>
+              <h3>Explore</h3>
+            </a>
+            <a class="menu-item" id="notifications">
+              <span>
+                <i class="uil uil-bell"></i>
+                <small class="notification-count">9+</small>
+              </span>
+              <h3>Notifications</h3>
+            </a>
+            <div class="notifications popup">
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="image/info.jpg"
+                    width="50"
+                    height="50"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Radhika</b> accepted your friend request.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="image/Infomation.jpg"
+                    width="50"
+                    height="50"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Rashika</b> commented on your post.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+              <div>
+                <div class="profile-photo">
+                  <img
+                    src="image/gurl.JPG"
+                    width="50"
+                    height="50"
+                    alt="Profile Photo"
+                  />
+                </div>
+                <div class="notification-body">
+                  <b>Ayusha</b> commented on your post.
+                  <small class="text-muted">2 Days Ago</small>
+                </div>
+              </div>
+            </div>
+
+            <a class="menu-item" id="messages">
+              <span>
+                <i class="uil uil-envelope-alt"></i>
+                <small class="notification-count">6</small>
+              </span>
+              <h3>Message</h3>
+            </a>
+
+            <a class="menu-item">
+              <span><i class="uil uil-bookmark"></i></span>
+              <h3>Bookmarks</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-chart-line"></i></span>
+              <h3>Analytics</h3>
+            </a>
+            <a class="menu-item" id="theme">
+              <span><i class="uil uil-palette"></i></span>
+              <h3>Theme</h3>
+            </a>
+            <a class="menu-item">
+              <span><i class="uil uil-setting"></i></span>
+              <h3>Settings</h3>
+            </a>
+          </div>
+          <!-- End of sidebar -->
+          <label for="create-post" class="btn btn-primary">Create post</label>
+        </div>
+
+        <!-- MIDDLE -->
+        <div class="middle">
+          <!-- STORIES -->
+          <div class="stories">
+            <div class="story">
+              <div class="profile-photo">
+                <img src="image/brother.jpg" alt="Your Story" />
+              </div>
+              <p class="name">Your Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="image/gurl.JPG" height="50" alt="Ayusha's Story" />
+              </div>
+              <p class="name">Ayusha's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="image/dora.jpg" height="50" alt="Menuka's Story" />
+              </div>
+              <p class="name">Menuka's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="image/dog.jpg" height="50" alt="Neema's Story" />
+              </div>
+              <p class="name">Neema's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img src="image/info.jpg" height="50" alt="Radhika's Story" />
+              </div>
+              <p class="name">Radhika's Story</p>
+            </div>
+            <div class="story">
+              <div class="profile-photo">
+                <img
+                  src="image/Infomation.jpg"
+                  height="50"
+                  alt="Rashika's Story"
+                />
+              </div>
+              <p class="name">Rashika's Story</p>
+            </div>
+          </div>
+
+          <!-- End of stories -->
+          <form class="create-post">
+            <div class="profile-photo">
+              <img src="image/brother.jpg" alt="Profile Photo" />
+            </div>
+            <input
+              type="text"
+              placeholder="What is on your mind?"
+              id="create-post"
+            />
+            <input type="submit" value="Post" class="btn btn-primary" />
+          </form>
+
+          <!-- FEEDS -->
+          <div class="feeds">
+            <!-- feed1 -->
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-photo">
+                    <img
+                      src="image/brother.jpg"
+                      height="50"
+                      alt="Profile Photo"
+                    />
+                  </div>
+                  <div class="info">
+                    <h3>srijana</h3>
+                    <h4>updated her cover picture, 20 minutes ago</h4>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+              <div class="video">
+                <img src="image/srijana.jpg" alt="Cover Photo" />
+              </div>
+              <div class="action-buttons">
+                <div class="interaction-buttons">
+                  <span><i class="uil uil-heart"></i></span>
+                  <span><i class="uil uil-comment-dots"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark-full"></i></span>
+                </div>
+              </div>
+              <div class="liked-by">
+                <span
+                  ><img src="image/dog.jpg" height="20" alt="Liked by"
+                /></span>
+                <span
+                  ><img src="image/info.jpg" height="20" alt="Liked by"
+                /></span>
+                <span
+                  ><img src="image/cyber.jpg" height="20" alt="Liked by"
+                /></span>
+                <p>Liked by <b>Neema</b> and 2040 others</p>
+              </div>
+              <div class="comments text-muted">View all 277 comments</div>
+            </div>
+
+            <!-- feed2 -->
+            <div class="feed">
+              <div class="head">
+                <div class="user">
+                  <div class="profile-photo">
+                    <img src="image/info.jpg" alt="Profile Photo" />
+                  </div>
+                  <div class="info">
+                    <h3>Radhika</h3>
+                    <h4>updated her reel, 10 minutes ago</h4>
+                  </div>
+                </div>
+                <span class="edit">
+                  <i class="uil uil-ellipsis-h"></i>
+                </span>
+              </div>
+              <div class="video">
+                <img src="image/Infomation.jpg" alt="Reel Photo" />
+              </div>
+              <div class="action-buttons">
+                <div class="interaction-buttons">
+                  <span><i class="uil uil-heart"></i></span>
+                  <span><i class="uil uil-comment-dots"></i></span>
+                  <span><i class="uil uil-share-alt"></i></span>
+                </div>
+                <div class="bookmark">
+                  <span><i class="uil uil-bookmark-full"></i></span>
+                </div>
+              </div>
+              <div class="liked-by">
+                <span
+                  ><img src="image/gurl.JPG" height="20" alt="Liked by"
+                /></span>
+                <span
+                  ><img src="image/dog.jpg" height="20" alt="Liked by"
+                /></span>
+                <span
+                  ><img src="image/dora.jpg" height="20" alt="Liked by"
+                /></span>
+                <p>Liked by <b>Radhika</b> and 2040 others</p>
+              </div>
+              <div class="comments text-muted">View all 277 comments</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="right">
+          <!-- MESSAGES -->
+          <div class="messages">
+            <div class="heading">
+              <h4>Messages</h4>
+              <i class="uil uil-edit"></i>
+            </div>
+            <!-- search bar -->
+            <div class="search-bar">
+              <i class="uil uil-search"></i>
+              <input
+                type="search"
+                placeholder="Search messages"
+                id="message-search"
+              />
+            </div>
+            <!-- messages category -->
+            <div class="category">
+              <h6 class="active">Primary</h6>
+              <h6>General</h6>
+              <h6 class="message-requests">Requests (7)</h6>
+            </div>
+
+            <!-- messages -->
+            <div class="message">
+              <div class="profile-photo">
+                <img src="image/dog.jpg" height="50" alt="Message Photo" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>Neema</h5>
+                <p class="text-bold">Hii</p>
+              </div>
+            </div>
+
+            <div class="message">
+              <div class="profile-photo">
+                <img src="image/gurl.JPG" height="50" alt="Message Photo" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>Radhika</h5>
+                <p class="text-bold">Hello !</p>
+              </div>
+            </div>
+
+            <div class="message">
+              <div class="profile-photo">
+                <img src="image/info.jpg" height="50" alt="Message Photo" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>Rashika</h5>
+                <p class="text-bold">Hello</p>
+              </div>
+            </div>
+
+            <div class="message">
+              <div class="profile-photo">
+                <img src="image/cyber.jpg" height="50" alt="Message Photo" />
+                <div class="active"></div>
+              </div>
+              <div class="message-body">
+                <h5>sita</h5>
+                <p class="text-bold">Hi</p>
+              </div>
+            </div>
+          </div>
+          <!-- END OF MESSAGES -->
+
+          <!-- FRIEND REQUESTS -->
+          <div class="friend-requests">
+            <h4>Requests</h4>
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img
+                    src="image/guitar.jpg"
+                    height="50"
+                    alt="Friend Request Photo"
+                  />
+                </div>
+                <div>
+                  <h5>Rojina</h5>
+                  <p class="text-muted">10 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img
+                    src="image/info.jpg"
+                    height="50"
+                    alt="Friend Request Photo"
+                  />
+                </div>
+                <div>
+                  <h5>sunita</h5>
+                  <p class="text-muted">20 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img
+                    src="image/dora.jpg"
+                    height="50"
+                    alt="Friend Request Photo"
+                  />
+                </div>
+                <div>
+                  <h5>Rista</h5>
+                  <p class="text-muted">40 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+
+            <div class="request">
+              <div class="info">
+                <div class="profile-photo">
+                  <img
+                    src="image/rat.jpg"
+                    height="50"
+                    alt="Friend Request Photo"
+                  />
+                </div>
+                <div>
+                  <h5>Renuka</h5>
+                  <p class="text-muted">30 mutual friends</p>
+                </div>
+              </div>
+              <div class="action">
+                <button class="btn btn-primary">Accept</button>
+                <button class="btn">Decline</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
